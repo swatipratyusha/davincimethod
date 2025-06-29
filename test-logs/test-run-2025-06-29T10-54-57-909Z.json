@@ -1,0 +1,1613 @@
+{
+  "summary": {
+    "totalEntries": 155,
+    "testRuns": 11,
+    "contractsDeployed": 40,
+    "papersSubmitted": 1,
+    "researchersRegistered": 1,
+    "totalGasUsed": 59557162
+  },
+  "entries": [
+    {
+      "testName": "SETUP",
+      "eventType": "TEST_START",
+      "details": {
+        "description": "Initializing comprehensive test suite"
+      },
+      "timestamp": "2025-06-29T10:54:57.909Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.924Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.924Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.924Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.924Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.925Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.925Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.925Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.925Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 1,
+      "gasUsed": 485972,
+      "transactionHash": "0x1de01e3f50aabffbabb675bfca12a4daed2efacb5d2018675324636acb76775c",
+      "timestamp": "2025-06-29T10:54:57.953Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 2,
+      "gasUsed": 615782,
+      "transactionHash": "0xc6c03a28fdab34989a3ce550f5cdbbaa938ed1ea866d9e165bdac8cf8ab030c8",
+      "timestamp": "2025-06-29T10:54:57.961Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 3,
+      "gasUsed": 1093089,
+      "transactionHash": "0x3a1f0ad0d9d4ce4a1a5b64d5bd1806215f59793e56fc3e239597f6996bbf53ac",
+      "timestamp": "2025-06-29T10:54:57.969Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 4,
+      "gasUsed": 3670736,
+      "transactionHash": "0x0cadf6a7938a2ff84307cd8642169518bf4a4981f811a8181ee142c17dce0f20",
+      "timestamp": "2025-06-29T10:54:57.981Z"
+    },
+    {
+      "testName": "HelloWorld - Get Message",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:57.981Z"
+    },
+    {
+      "testName": "HelloWorld - Get Message",
+      "eventType": "CONTRACT_INTERACTION",
+      "details": {
+        "contractName": "HelloWorld",
+        "functionName": "getMessage",
+        "parameters": {},
+        "cost": "0 gas"
+      },
+      "transactionHash": "view-function",
+      "timestamp": "2025-06-29T10:54:57.985Z"
+    },
+    {
+      "testName": "HelloWorld - Get Message",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "4ms"
+      },
+      "timestamp": "2025-06-29T10:54:57.985Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.987Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:57.988Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 5,
+      "gasUsed": 485972,
+      "transactionHash": "0xe1884dfba63e416c15e37e143baf546a79e7386531b90138beee78477f73345f",
+      "timestamp": "2025-06-29T10:54:57.992Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 6,
+      "gasUsed": 615782,
+      "transactionHash": "0xef6e5f4276c8893038065786752f09afc1f3b69a5cc266de61daabbf91109ffb",
+      "timestamp": "2025-06-29T10:54:57.997Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 7,
+      "gasUsed": 1093089,
+      "transactionHash": "0xf2e7553fc1e2f93065172b0cf319b18ffef9efae199d535528299a808d61e7e1",
+      "timestamp": "2025-06-29T10:54:58.003Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 8,
+      "gasUsed": 3670736,
+      "transactionHash": "0x9b98ce61375d4c34a8c982a7752ec987fbd8193214a991082d49271e8ebdb2a3",
+      "timestamp": "2025-06-29T10:54:58.013Z"
+    },
+    {
+      "testName": "HelloWorld - Set Message",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.013Z"
+    },
+    {
+      "testName": "HelloWorld - Set Message",
+      "eventType": "CONTRACT_INTERACTION",
+      "details": {
+        "contractName": "HelloWorld",
+        "functionName": "setMessage",
+        "parameters": {
+          "newMessage": "Hello, ChainIndexed!"
+        },
+        "cost": "28254 gas"
+      },
+      "blockNumber": 9,
+      "gasUsed": 28254,
+      "transactionHash": "0x30c6a09afdd04ebbd3273ceff53ce7a3e261533a08239cd80687a1a184fe44d5",
+      "timestamp": "2025-06-29T10:54:58.016Z"
+    },
+    {
+      "testName": "HelloWorld - Set Message",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "4ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.017Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.019Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 10,
+      "gasUsed": 485972,
+      "transactionHash": "0x977b87041337a561c3cb1c917df1a00faf6e86def33a64b3de63edc91e4709c2",
+      "timestamp": "2025-06-29T10:54:58.024Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 11,
+      "gasUsed": 615782,
+      "transactionHash": "0xb10ebcb3b1dc9c6a2a6beb532c0f95670693da20b3e3e2f4cc1a54a251361eac",
+      "timestamp": "2025-06-29T10:54:58.029Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 12,
+      "gasUsed": 1093089,
+      "transactionHash": "0x5f0c84f04c0a311782345e9e390771be48973cdc47667173179a4b98e6c719d5",
+      "timestamp": "2025-06-29T10:54:58.033Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 13,
+      "gasUsed": 3670736,
+      "transactionHash": "0x1888ccab624406866629a21416043f4226501fe5bcba8b416c5af2b28dcf6eb7",
+      "timestamp": "2025-06-29T10:54:58.043Z"
+    },
+    {
+      "testName": "ResearcherRegistry - Register Researcher",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.044Z"
+    },
+    {
+      "testName": "ResearcherRegistry - Register Researcher",
+      "eventType": "RESEARCHER_REGISTERED",
+      "details": {
+        "researcherAddress": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "name": "Dr. Alice Johnson",
+        "institution": "MIT",
+        "registrationCost": "47904 gas"
+      },
+      "blockNumber": 14,
+      "gasUsed": 47904,
+      "transactionHash": "0x0ba193f4f02e58c360d9cb5eb9f6da2a55339b4819a11e05c54bc0db614c2408",
+      "timestamp": "2025-06-29T10:54:58.047Z"
+    },
+    {
+      "testName": "ResearcherRegistry - Register Researcher",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "6ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.050Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.054Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 15,
+      "gasUsed": 485972,
+      "transactionHash": "0x8fee451c1dc55c608f65d3a7d71dce0c70dade50a7f280ed5fa28435b45f24dc",
+      "timestamp": "2025-06-29T10:54:58.066Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x9A676e781A523b5d0C0e43731313A708CB607508",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 16,
+      "gasUsed": 615782,
+      "transactionHash": "0xe59d3e46dc493821ab378bc28eb82e0251ba7df1429af4013c5ec7f7936a8c8b",
+      "timestamp": "2025-06-29T10:54:58.071Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 17,
+      "gasUsed": 1093089,
+      "transactionHash": "0xeadf96a8f5ceb7edbd31cbf0bb1625b463bd27ff84f6a40ed94c31b6b08f099f",
+      "timestamp": "2025-06-29T10:54:58.076Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 18,
+      "gasUsed": 3670736,
+      "transactionHash": "0xde562281499f1a3a6a2abb59d454c7358a6f26ed7e83f0bb4099be34ab32bddd",
+      "timestamp": "2025-06-29T10:54:58.085Z"
+    },
+    {
+      "testName": "ResearcherRegistry - Empty Name Validation",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.086Z"
+    },
+    {
+      "testName": "ResearcherRegistry - Empty Name Validation",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "4ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.090Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.092Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 20,
+      "gasUsed": 485972,
+      "transactionHash": "0x13fee84cad2fcc395697dcc76cfad70ab0810979151edb29ac1cd2e62d6b2e07",
+      "timestamp": "2025-06-29T10:54:58.096Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x68B1D87F95878fE05B998F19b66F4baba5De1aed",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 21,
+      "gasUsed": 615782,
+      "transactionHash": "0x3aece2e83dd6bec23f7136852c06f04a3cb1b62867471495f56cf0ee3e169ca0",
+      "timestamp": "2025-06-29T10:54:58.101Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 22,
+      "gasUsed": 1093089,
+      "transactionHash": "0xb934404fadb4899bb34526340a7b6be08b40f5a281b96ca5674b39ec13035f67",
+      "timestamp": "2025-06-29T10:54:58.107Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 23,
+      "gasUsed": 3670736,
+      "transactionHash": "0xc6db7d32a914f966943063d2f69580b1157b96b37448a4ed2215104468635493",
+      "timestamp": "2025-06-29T10:54:58.114Z"
+    },
+    {
+      "testName": "WalletAuth - User Registration",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.114Z"
+    },
+    {
+      "testName": "WalletAuth - User Registration",
+      "eventType": "CONTRACT_INTERACTION",
+      "details": {
+        "contractName": "WalletAuth",
+        "functionName": "registerUser",
+        "parameters": {
+          "name": "Bob Smith",
+          "email": "bob@example.com"
+        },
+        "cost": "138741 gas"
+      },
+      "blockNumber": 24,
+      "gasUsed": 138741,
+      "transactionHash": "0x8f5f58f2a9da02a2bf21181ff04e419d1afe532c5986a221ac898b9f7eb56efa",
+      "timestamp": "2025-06-29T10:54:58.115Z"
+    },
+    {
+      "testName": "WalletAuth - User Registration",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "2ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.116Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.118Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 25,
+      "gasUsed": 485972,
+      "transactionHash": "0x96b25cc42a7d664e24579c838f5af165acf91ee90c7a1a8b24a45738565b136a",
+      "timestamp": "2025-06-29T10:54:58.123Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 26,
+      "gasUsed": 615782,
+      "transactionHash": "0x350a2ff33b32e2a9b4ef969e5070cd5c350320f6ee8f8a889709a2c4a483b7a3",
+      "timestamp": "2025-06-29T10:54:58.129Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 27,
+      "gasUsed": 1093089,
+      "transactionHash": "0x4d7f1dfb92443829816900e690f130e0aac808b20db9dba3613742d52000ab03",
+      "timestamp": "2025-06-29T10:54:58.135Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 28,
+      "gasUsed": 3670736,
+      "transactionHash": "0x6c16527dc7b560579b8c655995b93394c379481c2f27b61500b560db4e850f3a",
+      "timestamp": "2025-06-29T10:54:58.143Z"
+    },
+    {
+      "testName": "WalletAuth - Duplicate Registration Prevention",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.143Z"
+    },
+    {
+      "testName": "WalletAuth - Duplicate Registration Prevention",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "3ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.146Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.147Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x4A679253410272dd5232B3Ff7cF5dbB88f295319",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 31,
+      "gasUsed": 485972,
+      "transactionHash": "0x6738cf92eab046f52c6784a624944ff555506bfb754ae1d885dfa4793878e8d6",
+      "timestamp": "2025-06-29T10:54:58.152Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x7a2088a1bFc9d81c55368AE168C2C02570cB814F",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 32,
+      "gasUsed": 615782,
+      "transactionHash": "0x14ba804f85712055f49ad88c2fb1fcb31366085f238bb78f3b690fdf2f28fa16",
+      "timestamp": "2025-06-29T10:54:58.156Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x09635F643e140090A9A8Dcd712eD6285858ceBef",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 33,
+      "gasUsed": 1093089,
+      "transactionHash": "0xbfb64074347cc206e4d32a0adbc66d936f1def27cf73972e3bccb17623144f24",
+      "timestamp": "2025-06-29T10:54:58.162Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0xc5a5C42992dECbae36851359345FE25997F5C42d",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 34,
+      "gasUsed": 3670736,
+      "transactionHash": "0x6720a581dce4efa22699b66d24fdacbb65e244218d1bed1ab3827f2038a9a03c",
+      "timestamp": "2025-06-29T10:54:58.170Z"
+    },
+    {
+      "testName": "PaperSubmission - Submit Paper",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.170Z"
+    },
+    {
+      "testName": "PaperSubmission - Submit Paper",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmX1234567890abcdef",
+        "contentType": "academic-paper",
+        "description": "Research paper content stored on IPFS"
+      },
+      "timestamp": "2025-06-29T10:54:58.171Z"
+    },
+    {
+      "testName": "PaperSubmission - Submit Paper",
+      "eventType": "PAPER_SUBMITTED",
+      "details": {
+        "paperId": 1,
+        "ipfsHash": "QmX1234567890abcdef",
+        "title": "Blockchain in Academic Research",
+        "doi": "10.1000/blockchain-paper-2024",
+        "authors": [
+          "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+        ],
+        "keywords": [
+          "blockchain",
+          "academia",
+          "research"
+        ],
+        "submissionCost": "612036 gas"
+      },
+      "blockNumber": 35,
+      "gasUsed": 612036,
+      "transactionHash": "0x9a982d3ae68703befb9ac1498febafdc6d97fb111174318e77a0282aa8f068b8",
+      "timestamp": "2025-06-29T10:54:58.180Z"
+    },
+    {
+      "testName": "PaperSubmission - Submit Paper",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "22ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.192Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.198Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.198Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.199Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x67d269191c92Caf3cD7723F116c85e6E9bf55933",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 36,
+      "gasUsed": 485972,
+      "transactionHash": "0x74942b28196bf548c192b3d7f1c9c593a24528600f9870cb3e51bb73359855c8",
+      "timestamp": "2025-06-29T10:54:58.209Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 37,
+      "gasUsed": 615782,
+      "transactionHash": "0x5e0d84a12992a6b5bd018792d42cfa76a843699f07d8445485e8127de1166ddc",
+      "timestamp": "2025-06-29T10:54:58.222Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0xc3e53F4d16Ae77Db1c982e75a937B9f60FE63690",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 38,
+      "gasUsed": 1093089,
+      "transactionHash": "0x5daab81afb79893b0d984e16bfcdec0be57d179d916ec2baebe1be07bb023d9a",
+      "timestamp": "2025-06-29T10:54:58.346Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 39,
+      "gasUsed": 3670736,
+      "transactionHash": "0xf9a293998067e8fa86c836ca4298a5f8e574d265171d0242941b09587a363e94",
+      "timestamp": "2025-06-29T10:54:58.362Z"
+    },
+    {
+      "testName": "PaperSubmission - Duplicate IPFS Prevention",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.362Z"
+    },
+    {
+      "testName": "PaperSubmission - Duplicate IPFS Prevention",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmDuplicateHash123",
+        "contentType": "academic-paper",
+        "description": "First paper with this IPFS hash"
+      },
+      "timestamp": "2025-06-29T10:54:58.363Z"
+    },
+    {
+      "testName": "PaperSubmission - Duplicate IPFS Prevention",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "3ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.365Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.367Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.367Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.367Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.367Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.367Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.368Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.368Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.368Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0x9E545E3C0baAB3E08CdfD552C960A1050f373042",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 42,
+      "gasUsed": 485972,
+      "transactionHash": "0x6f699ac1a553882428e7966da614ad88904321d7025c6c605c54c0f524952025",
+      "timestamp": "2025-06-29T10:54:58.371Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 43,
+      "gasUsed": 615782,
+      "transactionHash": "0xf929abd0208df5ac2b6e3c6b70f7c6745e6f2b052590085b5926a18450bac1e5",
+      "timestamp": "2025-06-29T10:54:58.375Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 44,
+      "gasUsed": 1093089,
+      "transactionHash": "0xbb582ef6279d790425ccec05e26ca39f66d75526e12dc4df0605d00190fe2b5a",
+      "timestamp": "2025-06-29T10:54:58.380Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0x851356ae760d987E095750cCeb3bC6014560891C",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 45,
+      "gasUsed": 3670736,
+      "transactionHash": "0x7b31154ede2a0b7be55b85667bd975e020dedf3269a42d08b8339d019ccab2fd",
+      "timestamp": "2025-06-29T10:54:58.392Z"
+    },
+    {
+      "testName": "PaperSubmission - Update Paper",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.392Z"
+    },
+    {
+      "testName": "PaperSubmission - Update Paper",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmInitialPaper123",
+        "contentType": "academic-paper",
+        "description": "Initial paper version"
+      },
+      "timestamp": "2025-06-29T10:54:58.395Z"
+    },
+    {
+      "testName": "PaperSubmission - Update Paper",
+      "eventType": "CONTRACT_INTERACTION",
+      "details": {
+        "contractName": "PaperSubmission",
+        "functionName": "updatePaper",
+        "parameters": {
+          "paperId": 1,
+          "newIpfsHash": "QmUpdatedPaper456",
+          "newVersion": "2.0.0"
+        },
+        "cost": "74437 gas"
+      },
+      "blockNumber": 47,
+      "gasUsed": 74437,
+      "transactionHash": "0xe7e4bd8c0496b56619b5a3c0551dc7e2db7bcd0834e6517f5d44a24b932298a9",
+      "timestamp": "2025-06-29T10:54:58.396Z"
+    },
+    {
+      "testName": "PaperSubmission - Update Paper",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmUpdatedPaper456",
+        "contentType": "academic-paper",
+        "description": "Updated paper version"
+      },
+      "timestamp": "2025-06-29T10:54:58.396Z"
+    },
+    {
+      "testName": "PaperSubmission - Update Paper",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "13ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.405Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.413Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "WALLET_CREATED",
+      "details": {
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "privateKey": "N/A"
+      },
+      "timestamp": "2025-06-29T10:54:58.414Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "HelloWorld",
+        "address": "0xf5059a5D33d5853360D16C683c16e67980206f36",
+        "deploymentCost": "485972 gas"
+      },
+      "blockNumber": 48,
+      "gasUsed": 485972,
+      "transactionHash": "0x81e2da44a3f4ba79c46a39136597fabbce6e8b743816f0f407efd96a8b70dc87",
+      "timestamp": "2025-06-29T10:54:58.423Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "ResearcherRegistry",
+        "address": "0x95401dc811bb5740090279Ba06cfA8fcF6113778",
+        "deploymentCost": "615782 gas"
+      },
+      "blockNumber": 49,
+      "gasUsed": 615782,
+      "transactionHash": "0x9769c60e6a2a447cb39465670967c27a7aa3021df05486e775db3b4b4a0dcba3",
+      "timestamp": "2025-06-29T10:54:58.428Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "WalletAuth",
+        "address": "0x998abeb3E57409262aE5b751f60747921B33613E",
+        "deploymentCost": "1093089 gas"
+      },
+      "blockNumber": 50,
+      "gasUsed": 1093089,
+      "transactionHash": "0x2ccd9c8d23b1f10bea1cb8b1214e810b6372db5c9f9b377f5ee46415c077be58",
+      "timestamp": "2025-06-29T10:54:58.433Z"
+    },
+    {
+      "testName": "SETUP",
+      "eventType": "CONTRACT_DEPLOYED",
+      "details": {
+        "contractName": "PaperSubmission",
+        "address": "0x70e0bA845a1A0F2DA3359C97E0285013525FFC49",
+        "deploymentCost": "3670736 gas"
+      },
+      "blockNumber": 51,
+      "gasUsed": 3670736,
+      "transactionHash": "0x5cfdb3f1d52dd19aa502a92bd843509a3f13325a147c2a77090060c8a244d802",
+      "timestamp": "2025-06-29T10:54:58.444Z"
+    },
+    {
+      "testName": "PaperSubmission - Get Papers By Author",
+      "eventType": "TEST_START",
+      "details": {
+        "status": "Started"
+      },
+      "timestamp": "2025-06-29T10:54:58.445Z"
+    },
+    {
+      "testName": "PaperSubmission - Get Papers By Author",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmAuthor1Paper1",
+        "contentType": "academic-paper",
+        "description": "First paper by author1"
+      },
+      "timestamp": "2025-06-29T10:54:58.448Z"
+    },
+    {
+      "testName": "PaperSubmission - Get Papers By Author",
+      "eventType": "IPFS_REFERENCED",
+      "details": {
+        "ipfsHash": "QmAuthor1Paper2",
+        "contentType": "academic-paper",
+        "description": "Second paper by author1"
+      },
+      "timestamp": "2025-06-29T10:54:58.449Z"
+    },
+    {
+      "testName": "PaperSubmission - Get Papers By Author",
+      "eventType": "CONTRACT_INTERACTION",
+      "details": {
+        "contractName": "PaperSubmission",
+        "functionName": "getPapersByAuthor",
+        "parameters": {
+          "author": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+        },
+        "cost": "0 gas"
+      },
+      "transactionHash": "view-function",
+      "timestamp": "2025-06-29T10:54:58.452Z"
+    },
+    {
+      "testName": "PaperSubmission - Get Papers By Author",
+      "eventType": "TEST_END",
+      "details": {
+        "status": "PASSED",
+        "duration": "7ms"
+      },
+      "timestamp": "2025-06-29T10:54:58.452Z"
+    },
+    {
+      "testName": "CLEANUP",
+      "eventType": "TEST_END",
+      "details": {
+        "description": "Comprehensive test suite completed"
+      },
+      "timestamp": "2025-06-29T10:54:58.452Z"
+    }
+  ]
+}
