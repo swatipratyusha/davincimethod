@@ -15,3 +15,7 @@ node_modules
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+
+# Test files (keep locally but don't push)
+/test
+/test-logs

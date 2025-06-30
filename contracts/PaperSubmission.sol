@@ -3,6 +3,8 @@ pragma solidity ^0.8.28;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "./VRFConsumer.sol";
+import "hardhat/console.sol";
 
 contract PaperSubmission is Ownable, ReentrancyGuard {
     // Paper struct to store metadata
@@ -19,6 +21,8 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
         bool isActive;             // Paper status
         string embeddingHash;      // IPFS hash of embeddings (title, abstract, keywords, authors)
         bool embeddingsGenerated;  // Whether embeddings have been generated
+        uint256 assignedReviewer;  // Reviewer assigned via VRF
+        bool reviewerAssigned;     // Whether a reviewer has been assigned
     }
     
     // Author struct
@@ -35,6 +39,9 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
     mapping(uint256 => Paper) public papers;
     mapping(address => uint256[]) public authorPapers; // Author address to paper IDs
     mapping(string => bool) public ipfsHashExists;     // Track used IPFS hashes
+    
+    // Chainlink VRF contract
+    VRFConsumer public vrfConsumer;
     
     // Events
     event PaperSubmitted(
@@ -60,6 +67,11 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
         uint256 indexed paperId,
         string embeddingHash,
         address indexed generatedBy
+    );
+    
+    event ReviewerAssigned(
+        uint256 indexed paperId,
+        uint256 indexed reviewerId
     );
     
     // Modifiers
@@ -106,14 +118,38 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
         address[] memory authors,
         string memory version
     ) external onlyVerifiedAuthor nonReentrant {
-        // Validation
+        console.log("=== PAPER SUBMISSION DEBUG ===");
+        console.log("IPFS Hash:", ipfsHash);
+        console.log("Title:", title);
+        console.log("Publication Year:", publicationYear);
+        console.log("Authors count:", authors.length);
+        console.log("Keywords count:", keywords.length);
+        console.log("Current timestamp:", block.timestamp);
+        
+        // Validation with detailed error messages and logging
+        console.log("Checking IPFS hash...");
         require(bytes(ipfsHash).length > 0, "IPFS hash cannot be empty");
+        
+        console.log("Checking title...");
         require(bytes(title).length > 0, "Title cannot be empty");
-        require(publicationYear > 1900 && publicationYear <= block.timestamp, "Invalid publication year");
+        
+        console.log("Checking publication year > 1900...");
+        require(publicationYear > 1900, "Publication year must be after 1900");
+        
+        console.log("Checking publication year <= timestamp...");
+        require(publicationYear <= block.timestamp, "Publication year cannot be in the future");
+        
+        console.log("Checking authors array...");
         require(authors.length > 0, "Must have at least one author");
-        require(authors.length <= 10, "Too many authors");
-        require(keywords.length <= 20, "Too many keywords");
+        require(authors.length <= 10, "Too many authors (max 10)");
+        
+        console.log("Checking keywords array...");
+        require(keywords.length <= 20, "Too many keywords (max 20)");
+        
+        console.log("Checking IPFS hash uniqueness...");
         require(!ipfsHashExists[ipfsHash], "IPFS hash already exists");
+        
+        console.log("All validations passed! Creating paper...");
         
         // Increment paper ID
         _paperIds += 1;
@@ -132,7 +168,9 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
             version: version,
             isActive: true,
             embeddingHash: "",
-            embeddingsGenerated: false
+            embeddingsGenerated: false,
+            assignedReviewer: 0,
+            reviewerAssigned: false
         });
         
         // Update mappings
@@ -143,6 +181,7 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
             authorPapers[authors[i]].push(paperId);
         }
         
+        console.log("Paper created successfully! Paper ID:", paperId);
         emit PaperSubmitted(paperId, ipfsHash, title, msg.sender, block.timestamp);
     }
     
@@ -260,5 +299,55 @@ contract PaperSubmission is Ownable, ReentrancyGuard {
         }
         
         return result;
+    }
+    
+    // ========== CHAINLINK VRF INTEGRATION FUNCTIONS ==========
+    
+    /**
+     * @dev Set the VRF consumer contract
+     * @param _vrfConsumer Address of the VRF consumer contract
+     */
+    function setVRFConsumer(address _vrfConsumer) external onlyOwner {
+        vrfConsumer = VRFConsumer(_vrfConsumer);
+    }
+    
+    /**
+     * @dev Trigger reviewer assignment using VRF
+     * @param paperId ID of the paper
+     */
+    function triggerReviewerAssignment(uint256 paperId) external onlyOwnerOrAuthor(paperId) {
+        require(address(vrfConsumer) != address(0), "VRF consumer not set");
+        require(papers[paperId].isActive, "Paper is not active");
+        require(!papers[paperId].reviewerAssigned, "Reviewer already assigned");
+        
+        vrfConsumer.requestRandomWords(paperId);
+    }
+    
+    /**
+     * @dev Update paper with reviewer assignment from VRF
+     * @param paperId ID of the paper
+     */
+    function updatePaperWithReviewer(uint256 paperId) external {
+        require(address(vrfConsumer) != address(0), "VRF consumer not set");
+        require(papers[paperId].isActive, "Paper is not active");
+        
+        uint256 reviewerId = vrfConsumer.getAssignedReviewer(paperId);
+        require(reviewerId > 0, "No reviewer assigned");
+        
+        papers[paperId].assignedReviewer = reviewerId;
+        papers[paperId].reviewerAssigned = true;
+        
+        emit ReviewerAssigned(paperId, reviewerId);
+    }
+    
+    /**
+     * @dev Get the assigned reviewer for a paper
+     * @param paperId ID of the paper
+     * @return reviewerId The ID of the assigned reviewer
+     * @return isAssigned Whether a reviewer has been assigned
+     */
+    function getPaperReviewer(uint256 paperId) external view returns (uint256 reviewerId, bool isAssigned) {
+        require(paperId > 0 && paperId <= _paperIds, "Paper does not exist");
+        return (papers[paperId].assignedReviewer, papers[paperId].reviewerAssigned);
     }
 } 
