@@ -1,138 +1,216 @@
-# ChainIndexed - On-Chain H-Index with AI Citation Verification
+# ChainIndexed: Decentralized Academic Reputation System
 
-## Overview
+## Problem Statement
 
-ChainIndexed is a blockchain-based academic citation verification system that calculates H-Index scores for researchers using AI-powered citation verification. This MVP focuses on the core smart contract functionality without a frontend.
+Academic reputation systems face significant challenges in the digital age:
 
-## Features
+- **Centralized Control**: Traditional H-index calculations are controlled by private companies (Google Scholar, Web of Science, Scopus)
+- **Lack of Transparency**: Citation verification processes are opaque and subject to manipulation
+- **Limited Accessibility**: High costs and paywalls restrict access to citation data
+- **Exorbitant Publishing Costs**: Researchers pay thousands of dollars to publish in prestigious journals
+- **Paywall Barriers**: Published research is locked behind expensive subscriptions, limiting global access to knowledge
+- **Verification Bottlenecks**: Manual review processes create delays and inconsistencies
+- **Trust Issues**: Researchers must trust third-party platforms without verifiable proof
 
-### Core Functionality
-- **Researcher Registration**: Researchers can register with their name and institution
-- **Paper Submission**: Registered researchers can submit academic papers with metadata
-- **Citation Management**: Track citations between papers with DOI references
-- **H-Index Calculation**: On-chain calculation of H-Index based on verified citations
-- **AI Citation Verification**: Framework for AI-powered citation verification (owner-controlled)
+## Solution Overview
 
-### Smart Contract Architecture
+ChainIndexed is a decentralized academic reputation system that leverages blockchain technology, AI-powered citation verification, and Chainlink's verifiable randomness to create a transparent, trustless platform for academic reputation management.
 
-The `ChainIndexed.sol` contract includes:
+## Current MVP Features
 
-1. **Researcher Management**
-   - Registration with name and institution
-   - Verification status tracking
-   - H-Index and citation statistics
+### Core Smart Contract Functionality
+- **Paper Submission System**: Researchers can submit academic papers with comprehensive metadata
+- **IPFS Integration**: Decentralized storage of paper content and metadata
+- **AI-Powered Embeddings**: Automated generation of paper embeddings for similarity analysis
+- **Chainlink VRF Integration**: Verifiable random assignment of peer reviewers
+- **Researcher Registry**: On-chain researcher profiles and verification
 
-2. **Paper Management**
-   - Paper submission with title, DOI, authors, and publication year
-   - Citation count tracking
-   - Verification status
+### Technical Architecture
 
-3. **Citation System**
-   - Citation creation between papers
-   - Verification framework for AI integration
-   - Prevention of self-citations
+#### Smart Contracts
+- `PaperSubmission.sol`: Core paper management and submission logic
+- `ResearcherRegistry.sol`: Researcher profile and verification system
+- `VRFConsumer.sol`: Chainlink VRF integration for random reviewer assignment
+- `MockVRFCoordinator.sol`: Local development VRF coordinator
 
-4. **H-Index Calculation**
-   - Algorithmic calculation based on citation counts
-   - Owner-controlled updates
-   - Real-time score updates
+#### Frontend Application
+- **React-based UI**: Modern, responsive interface with Da Vinci-inspired design
+- **Web3 Integration**: MetaMask wallet connection and transaction management
+- **PDF Processing**: Client-side PDF text extraction and analysis
+- **Real-time Updates**: Live status updates for paper submission and review processes
 
-## Project Structure
+## Chainlink Integration
 
-```
-chainlinkChromion'25/
-├── contracts/
-│   └── ChainIndexed.sol          # Main smart contract
-├── scripts/
-│   ├── deploy.ts                 # Deployment script
-│   └── utils.ts                  # Utility functions
-├── test/
-│   └── ChainIndexed.test.ts      # Test suite
-├── hardhat.config.ts             # Hardhat configuration
-├── package.json                  # Dependencies
-└── README.md                     # This file
-```
+### Verifiable Randomness (VRF)
+ChainIndexed uses Chainlink VRF to ensure fair and transparent peer reviewer assignment:
+
+- **Random Reviewer Selection**: Each paper is assigned a random reviewer from the pool
+- **Verifiable Fairness**: All randomness is cryptographically verifiable
+- **Prevention of Manipulation**: No single entity can influence reviewer selection
+- **Audit Trail**: Complete transparency in the assignment process
+
+### Implementation Details
+- **VRF Request Flow**: Paper submission triggers VRF request for reviewer assignment
+- **Callback Mechanism**: Smart contract receives random number and assigns reviewer
+- **Gas Optimization**: Efficient handling of VRF callbacks and state updates
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
+- MetaMask wallet
+- Sepolia testnet ETH (for deployment)
 
 ### Installation
 
-1. **Install dependencies**:
+1. **Clone the repository**:
    ```bash
-   npm install
+   git clone <repository-url>
+   cd chainlinkChromion'25
    ```
 
-2. **Compile the smart contract**:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   cd frontend && npm install
+   ```
+
+3. **Environment setup**:
+   ```bash
+   # Root directory (.env)
+   cp .env.example .env
+   # Add your private keys and API keys
+   
+   # Frontend directory (.env)
+   cd frontend
+   cp .env.example .env
+   # Add frontend-specific environment variables
+   ```
+
+   **Root Directory Environment Variables:**
+   ```env
+   # Blockchain Configuration
+   PRIVATE_KEY=your_private_key_here
+   SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/your_project_id
+   
+   # Local Development VRF (MockVRFCoordinator)
+   # Note: For production, replace with real Chainlink VRF subscription
+   MOCK_VRF_COORDINATOR_ADDRESS=0x610178dA211FEF7D417bC0e6FeD39F05609AD788
+   
+   # IPFS Configuration
+   IPFS_PROJECT_ID=your_ipfs_project_id
+   IPFS_PROJECT_SECRET=your_ipfs_project_secret
+   
+   # OpenAI Configuration (for embeddings)
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+   **Frontend Environment Variables:**
+   ```env
+   # Contract Addresses (update after deployment)
+   REACT_APP_PAPER_SUBMISSION_CONTRACT=deployed_contract_address
+   REACT_APP_RESEARCHER_REGISTRY_CONTRACT=deployed_contract_address
+   REACT_APP_VRF_CONSUMER_CONTRACT=deployed_contract_address
+   REACT_APP_MOCK_VRF_COORDINATOR=0x610178dA211FEF7D417bC0e6FeD39F05609AD788
+   
+   # Blockchain Configuration
+   REACT_APP_SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/your_project_id
+   
+   # IPFS Configuration
+   REACT_APP_IPFS_PROJECT_ID=your_ipfs_project_id
+   REACT_APP_IPFS_PROJECT_SECRET=your_ipfs_project_secret
+   
+   # OpenAI Configuration
+   REACT_APP_OPENAI_API_KEY=your_openai_api_key
+   ```
+
+   **Note:** This MVP uses MockVRFCoordinator for local development. For production deployment with real Chainlink VRF, you would need:
+   - Chainlink VRF subscription on Sepolia
+   - Real VRF coordinator address
+   - VRF key hash and subscription ID
+
+4. **Compile contracts**:
    ```bash
    npx hardhat compile
    ```
 
-3. **Run tests**:
+5. **Deploy to Sepolia**:
    ```bash
-   npx hardhat test
+   npx hardhat run scripts/deploy.ts --network sepolia
    ```
 
-4. **Start local blockchain**:
+6. **Start frontend**:
    ```bash
-   npx hardhat node
+   cd frontend
+   npm start
    ```
 
-5. **Deploy to local network**:
-   ```bash
-   npx hardhat run scripts/deploy.ts --network localhost
-   ```
+## Usage Guide
 
-## Smart Contract Functions
+### For Researchers
 
-### Researcher Functions
-- `registerResearcher(string name, string institution)` - Register as a researcher
-- `getResearcher(address researcherAddress)` - Get researcher information
-
-### Paper Functions
-- `submitPaper(string title, string doi, string authors, uint256 publicationYear)` - Submit a new paper
-- `getPaper(uint256 paperId)` - Get paper information
-- `getResearcherPapers(address researcherAddress)` - Get all papers by a researcher
-
-### Citation Functions
-- `addCitation(string citingPaperDoi, string citedPaperDoi)` - Add a citation
-- `verifyCitation(uint256 citationId)` - Verify a citation (owner only)
-- `getPaperCitations(string doi)` - Get all citations for a paper
-
-### H-Index Functions
-- `calculateHIndex(address researcherAddress)` - Calculate H-Index (owner only)
-
-## AI Integration Framework
-
-The contract provides a framework for AI citation verification:
-
-1. **Citation Submission**: Citations are initially unverified
-2. **AI Verification**: Owner (AI system) can verify citations
-3. **H-Index Updates**: Verified citations update H-Index calculations
-4. **Audit Trail**: All verification actions are logged on-chain
-
-## Next Steps for MVP
-
-1. **Complete Testing**: Implement comprehensive test suite
-2. **AI Integration**: Connect AI verification system to the contract
-3. **Gas Optimization**: Optimize contract for cost efficiency
-4. **Security Audit**: Conduct smart contract security review
-5. **Deployment**: Deploy to testnet for validation
+1. **Connect Wallet**: Use MetaMask to connect your wallet
+2. **Submit Paper**: Upload PDF and provide metadata
+3. **Generate Embeddings**: AI processes paper content for similarity analysis
+4. **Review Assignment**: Chainlink VRF automatically assigns peer reviewer
 
 ## Technical Specifications
 
-- **Solidity Version**: 0.8.19
-- **Framework**: Hardhat with TypeScript
-- **Testing**: Chai + Mocha
-- **Security**: OpenZeppelin contracts for access control and security
+- **Blockchain**: Ethereum (Sepolia testnet)
+- **Smart Contracts**: Solidity 0.8.19
+- **Frontend**: React 18 with TypeScript
+- **Web3**: ethers.js v6
+- **Storage**: IPFS for decentralized content storage
+- **AI**: OpenAI embeddings for paper similarity
+- **VRF**: Chainlink VRF v2 for random reviewer assignment
 
-## License
+## Future Roadmap
 
-MIT License - see LICENSE file for details
+### Phase 2: Enhanced Verification
+- **Multi-AI Verification**: Integration with multiple AI models for citation verification
+- **Cross-Chain Compatibility**: Support for multiple blockchain networks
+- **Advanced Analytics**: Detailed citation analysis and impact metrics
+- **Reputation Tokens**: ERC-20 tokens for academic reputation
+
+### Phase 3: Decentralized Governance
+- **DAO Governance**: Community-driven platform management
+- **Staking Mechanisms**: Economic incentives for quality reviews
+- **Dispute Resolution**: On-chain arbitration for citation disputes
+- **Institutional Integration**: University and research institution partnerships
 
 ## Contributing
 
-This is an MVP implementation. For contributions, please follow standard development practices and ensure all tests pass before submitting changes.
+We welcome contributions from the academic and blockchain communities:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+3. **Implement your changes**
+4. **Add comprehensive tests**
+5. **Submit a pull request**
+
+### Development Guidelines
+- Follow Solidity best practices and security patterns
+- Ensure all tests pass before submitting
+- Document new features and API changes
+- Maintain code quality and readability
+
+## Security Considerations
+
+- **Smart Contract Audits**: All contracts undergo security review
+- **Access Control**: Proper role-based permissions and ownership management
+- **Input Validation**: Comprehensive validation of all user inputs
+- **Gas Optimization**: Efficient contract design for cost-effective operations
+
+## Acknowledgments
+
+- **Chainlink**: For providing verifiable randomness infrastructure
+- **IPFS**: For decentralized storage solutions
+- **OpenAI**: For AI-powered content analysis
+
+## Contact
+
+For questions, suggestions, or collaboration opportunities:
+- **GitHub Issues**: [Repository Issues](https://github.com/swatipratyusha/davincimethod.git/issues)
+
+*ChainIndexed: Revolutionizing academic reputation through blockchain technology and verifiable randomness.*
