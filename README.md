@@ -154,14 +154,6 @@ ChainIndexed uses Chainlink VRF to ensure fair and transparent peer reviewer ass
 2. **Submit Paper**: Upload PDF and provide metadata
 3. **Generate Embeddings**: AI processes paper content for similarity analysis
 4. **Review Assignment**: Chainlink VRF automatically assigns peer reviewer
-5. **Track Status**: Monitor paper status and review progress
-
-### For Reviewers
-
-1. **Receive Assignment**: Get notified of randomly assigned papers
-2. **Review Process**: Access paper content and metadata
-3. **Submit Review**: Provide feedback and recommendations
-4. **Earn Reputation**: Build reviewer reputation on-chain
 
 ## Technical Specifications
 
@@ -187,12 +179,6 @@ ChainIndexed uses Chainlink VRF to ensure fair and transparent peer reviewer ass
 - **Dispute Resolution**: On-chain arbitration for citation disputes
 - **Institutional Integration**: University and research institution partnerships
 
-### Phase 4: Ecosystem Expansion
-- **Conference Integration**: Decentralized conference management
-- **Grant Distribution**: Transparent research funding allocation
-- **Collaboration Networks**: AI-powered research collaboration matching
-- **Global Standards**: Industry-wide adoption and standardization
-
 ## Contributing
 
 We welcome contributions from the academic and blockchain communities:
@@ -216,24 +202,17 @@ We welcome contributions from the academic and blockchain communities:
 - **Input Validation**: Comprehensive validation of all user inputs
 - **Gas Optimization**: Efficient contract design for cost-effective operations
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - **Chainlink**: For providing verifiable randomness infrastructure
 - **IPFS**: For decentralized storage solutions
 - **OpenAI**: For AI-powered content analysis
-- **Academic Community**: For feedback and validation of use cases
 
 ## Contact
 
 For questions, suggestions, or collaboration opportunities:
-- **GitHub Issues**: [Repository Issues](https://github.com/your-repo/issues)
+- **GitHub Issues**: [Repository Issues](https://github.com/swatipratyusha/davincimethod.git/issues)
 - **Email**: [Your Email]
 - **Discord**: [Your Discord Server]
-
----
 
 *ChainIndexed: Revolutionizing academic reputation through blockchain technology and verifiable randomness.*
