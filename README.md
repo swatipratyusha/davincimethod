@@ -212,7 +212,5 @@ We welcome contributions from the academic and blockchain communities:
 
 For questions, suggestions, or collaboration opportunities:
 - **GitHub Issues**: [Repository Issues](https://github.com/swatipratyusha/davincimethod.git/issues)
-- **Email**: [Your Email]
-- **Discord**: [Your Discord Server]
 
 *ChainIndexed: Revolutionizing academic reputation through blockchain technology and verifiable randomness.*
